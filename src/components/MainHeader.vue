@@ -8,7 +8,7 @@
       </h2>
     </div>
     <div class="search-container">
-      <!-- Input field with search functionality -->
+      
       <input
         type="text"
         class="search-bar"
@@ -26,7 +26,7 @@
 export default {
   data() {
     return {
-      searchQuery: '', // Data binding for search query
+      searchQuery: '', 
     };
   },
   methods: {
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-/* CSS remains the same */
+
 .app-header {
   display: flex;
   align-items: center;

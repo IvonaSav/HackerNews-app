@@ -16,14 +16,10 @@
         <div class="post-list">
           <!-- Display Posts -->
           <PostItem v-for="post in filteredPosts" :key="post.id" :post="post" @click="selectPost(post)" />
-     
+          <CommentItems/>
         </div>
       </div>
     </div>
-
-    <!-- Display Story Comments if a Post is Selected -->
-   <StoryComments v-if="selectedPost" :commentIds="selectedPost.commentIds" />
-
   </div>
 </template>
 
@@ -32,7 +28,7 @@ import MainHeader from './components/MainHeader.vue';
 import SideBarMenu from './components/SideBarMenu.vue';
 import PostItem from './components/PostItem.vue';
 import SearchFilters from './components/SearchFilters.vue';
-import StoryComments from './components/StoryComments.vue';
+import CommentItems from './components/CommentItems.vue';
 
 export default {
   name: 'App',
@@ -41,7 +37,7 @@ export default {
     SearchFilters,
     SideBarMenu,
     PostItem,
-    StoryComments,
+    CommentItems
   },
   data() {
     return {

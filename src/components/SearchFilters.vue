@@ -1,7 +1,6 @@
 <template>
   <div class="filter-menu">
     <div class="filters">
-      <!-- Buttons with dynamic class binding for selected state -->
       <span>Hot in</span>
       <button 
         :class="{ selected: selectedFilter === 'Stories' }"
@@ -22,7 +21,6 @@
       </button>
     </div>
 
-    <!-- Results information with share icon aligned to the right -->
     <span class="results-info">
       88 results (0.001 seconds) 
       <i class="fas fa-share share-icon"></i>
@@ -35,13 +33,13 @@ export default {
   name: "FilterMenu",
   data() {
     return {
-      selectedFilter: 'Hot' // Default selected filter
+      selectedFilter: 'Hot' 
     };
   },
   methods: {
     onFilterClick(filter) {
-      this.selectedFilter = filter; // Update selected filter
-      this.$emit('filterChanged', filter); // Emit the selected filter to parent component
+      this.selectedFilter = filter; 
+      this.$emit('filterChanged', filter); 
     },
   },
 };
@@ -50,7 +48,7 @@ export default {
 <style scoped>
 .filter-menu {
   display: flex;
-  justify-content: space-between; /* Align items to the edges */
+  justify-content: space-between; 
   align-items: center;
   padding: 10px;
   background-color: #eaeaea;
@@ -86,12 +84,12 @@ export default {
 }
 
 .share-icon:hover {
-  color: #007bff; /* Change color on hover */
+  color: #007bff;
 }
 
-/* Styles for the selected filter button */
+
 .selected {
-  background-color: #007bff; /* Highlight color for selected button */
+  background-color: #007bff; 
   color: #fff;
 }
 </style>
